@@ -97,3 +97,6 @@ It is simply not affordable for public transport company
 
 1. A lot of LiDars can jamm each other.
 2. Computer vision systems can misclassify traffic signs under adversarial or unusual lighting conditions (e.g., reading a stop sign as a speed limit), posing risk in real traffic
+
+### C4 diagram
+![](vehicle-fleet.svg)
