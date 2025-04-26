@@ -36,6 +36,11 @@ If current Bus routes are overloaded, we need our self-drive buses to intersect 
 3. Replace current transport
 4. Adapt to road situations
 
+### CAP
+Availability has more priority than consistency. Vehicle may not have the most actual information, but it can reach destination, and handle at least some portion of load. 
+If consistency would be prioritized, it would stop vehicles, during network partions, cause road accidents, problems with traffic and increasing load on public transport.
+So, A > C
+
 ### Vehicle control system
 
 1. Vehicle route can change
