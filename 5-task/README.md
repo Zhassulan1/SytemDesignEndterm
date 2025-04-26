@@ -61,3 +61,5 @@ But instead of focusing on blockchain, I decided just to not store information t
 All interactions happen in encrypted channel (HTTPS)
 
 There is also counting system, that counts insertion numbers for each candidate, after voting day
+
+![](e-voting.svg)
