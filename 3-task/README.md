@@ -17,6 +17,10 @@
 4. API calls < 200 ms P95
 5. 95% of pages load in < 2 s
 
+### CAP theorem
+Availability has more priority, because there is no interactions that would need consistency.
+
+
 ### Capacity
 
 | Component | Instances | CPU | RAM | Storage | Notes |
