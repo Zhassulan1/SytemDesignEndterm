@@ -62,6 +62,8 @@ But instead of focusing on blockchain, I decided just to not store information t
 9. Load balancer sends to voting system.
 10. After vote is inserted to db, token is deleted
 
+Database Choice: postgres because transactionality is required
+
 All interactions happen in encrypted channel (HTTPS)
 
 There is also counting system, that counts insertion numbers for each candidate, after voting day

@@ -105,5 +105,13 @@ It is simply not affordable for public transport company
 
 Most of the load to authorization is read operations, only few write operations: registering new vehicle and adding new 2GIS-like app as user
 
+### Database choice: 
+1. Postgres with PostGIS can store data like space coordinates.
+2. Redis with RDB or AOF at Route Control Zone, routes are temporary data that will be accessed frequently
+3. Redis at User Interaction Zone with prewarm from another Redis, to temporary data that will be accessed frequently (routes)
+4. Postgres at Access Control Zone to relational data like Acces from external services (2GIS, Map...) and to store information about vehicles 
+5.Redis with prewarm at Access Control Zone, to store API tokens.
+
+
 ### C4 diagram
 ![](vehicle-fleet.svg)
