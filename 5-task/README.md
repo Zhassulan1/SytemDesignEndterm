@@ -30,7 +30,7 @@ Main Trade off is only authenticated user with digital signature can vote, there
     2. Ask user to authenticate beforehand using egov, and later use Digital signature
 2. Digital signature
     
-    Probably requires a lot of computational resources
+    Probably does not require much computational resources
     
 
 ### Anonymity
