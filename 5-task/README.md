@@ -1,4 +1,16 @@
 # 5-Task. e-Voting
+Assumed that most of the population has Digital signature (ЭЦП) keys to sign their vote.
+
+## Authentication
+
+1.  Biometric authentication: requesting egov to authenticate users. EGov may not be able to handle that
+    1. Scale egov
+    2. Ask user to authenticate beforehand using egov, and later use Digital signature
+2. Digital signature
+    
+    Probably does not require much computational resources
+    
+
 ### Non-Functional requirements
 
 1. 100M DAU (12 hour day) = 2300 RPS on average. Peak = 20000 RPS
@@ -17,21 +29,13 @@
 
 ### CAP theorem
 
-Consistency has more priority than availability
+Consistency has more priority than availability. Because we have to make sure that every voter’s voice is saved. By prioritizing availability, we may introduce problems with synchronization.
 
-Assume that most of the population has Digital signature (ЭЦП) keys to sign their vote.
+### Trade offs
 
-Main Trade off is only authenticated user with digital signature can vote, there is no other way.
-
-## Authentication
-
-1.  Biometric authentication: requesting egov to authenticate users. system may not be able to handle that
-    1. Scale egov
-    2. Ask user to authenticate beforehand using egov, and later use Digital signature
-2. Digital signature
-    
-    Probably does not require much computational resources
-    
+1. Performance and verifying, by introducing mechanisms to make sure that message/token is received, we add potential latency
+2. Security, dependence and performance, by making our app more secure by digital signatures, I added dependence on eGov like service, to verify, authenticate user, also this verification may reduce performance in case of biometry.
+3. Anonymity and reality. I could add ring signature technology to hide voter completely. But I couldn’t understand how it works. In implementation, this technology would be even more difficult.
 
 ### Anonymity
 
